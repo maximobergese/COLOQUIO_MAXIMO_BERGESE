@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+    background-color: #213442;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Logo */
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    height: 70px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo-link:hover .logo {
+    transform: translateX(5px);
+}
+
+/* Navegación */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+header nav ul li a:hover {
+    background-color: #2c4252;
+    border-radius: 5px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+/* Estilos del formulario */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonesForm {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonesForm:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor de la lista de pedidos */
+.pedido-list-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #213442;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    /* En pantallas más pequeñas como tabletas, ajustamos el header y formulario */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container, .pedido-list-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* En pantallas medianas, como tabletas, mejoramos la visualización */
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-container {
+        width: 95%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .pedido-list-container {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    /* Ajustar la tabla para pantallas más pequeñas */
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En pantallas pequeñas, como teléfonos móviles, ajustamos más */
+    .form-container {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    header nav ul li a {
+        padding: 8px 10px;
+    }
+}
+
+/* Tabla */
+.table-wrapper {
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #213442;
+    color: white;
+    text-align: inherit;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones de acciones en la tabla */
+table td button {
+    background-color: #213442;
+    display: inline-block;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #959595;
+    color: #213442;
+}
+
+table td button.consultar-btn {
+    background-color: #2196F3;
+}
+
+table td button.consultar-btn:hover {
+    background-color: #1e88e5;
+}
+
+table td button.modificar-btn {
+    background-color: #FF9800;
+}
+
+table td button.modificar-btn:hover {
+    background-color: #fb8c00;
+}
+
+table td button.eliminar-btn {
+    background-color: #f44336;
+}
+
+table td button.eliminar-btn:hover {
+    background-color: #e53935;
+}
+
+/* Responsividad de la tabla */
+@media (max-width: 768px) {
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Alinear botones uno al lado del otro */
+table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td button {
+    display: inline-block;
+    margin: 0 5px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBSodaSoft | Pedidos</title>
+    <link rel="stylesheet" href="../css/style-pedidos.css">
+    <link rel="icon" href="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <header>
+        <br>
+        <div class="header-container">
+            <a href="../html/index-panel.html" class="logo-link">
+                <img src="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../html/index-panel.html">Inicio</a></li>
+                    <li><a href="../html/index-clientes.html">Clientes</a></li>
+                    <li><a href="../html/index-pedidos.html">Pedidos</a></li>
+                    <li><a href="../html/index-recorridos.html">Recorrido</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    
+
+<main>
+    <div class="form-container">
+        <h2>Generar un pedido</h2>
+        <form id="pedidoForm">
+            <label for="Cliente">Cliente:</label>
+            <select id="Cliente" name="Cliente" required>
+                <!-- Acá se cargarán los clientes dinámicamente desde la base de datos -->
+            </select>
+
+            <label for="fecha">Selecciona una fecha:</label>
+            <input type="date" id="fecha" name="fecha" class="selectEstilo">
+
+            <label for="Producto">Producto:</label>
+            <select id="productoSelect">
+                <option value="" selected disabled >Seleccione un producto</option>
+            </select>
+            
+            <label for="cantidadInput">Cantidad:</label>
+            <input type="number" id="cantidadInput" value="1" min="1" class="selectEstilo">
+
+            <label for="precioInput">Precio Unitario:</label>
+            <input type="number" id="precioInput" step="0.01" min="0" class="selectEstilo" >
+
+            <button class="botonesForm" id="agregarProductoBtn">Agregar Producto</button>
+            <br>
+            <br>
+
+            <div id="pedidoContainer"></div>
+            <br>
+
+            <button class="botonesForm" type="submit">Enviar</button>
+        </form>
+    </div>
+    <h2>_______________</h2>
+
+    
+
+    <div class="pedido-list-container">
+        <h2>Lista de Pedidos Semanales</h2>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Fecha</th>
+                        <th>Precio Final</th>
+                        <th>ID Cliente</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="table_pedidos">
+                    <!-- Acá se listan los pedidos -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</main>
+
+<footer> 
+    <h4>MBSodaSoft</h4>
+    <h4>353-4228757 | mbsodasoft@gmail.com</h4>
+</footer>
+
+<script src="../scripts/script-pedidos.js"></script>
+</body>
+</html>

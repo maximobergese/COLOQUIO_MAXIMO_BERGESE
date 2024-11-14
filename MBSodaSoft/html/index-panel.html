@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBSodaSoft | Inicio</title>
+    <link rel="stylesheet" href="../css/style-panel.css">
+    <link rel="icon" href="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+</head>
+
+<body>
+    <header>
+        <div class="header-container" style="display: flex; align-items: center; justify-content: space-between;">
+            <a href="../html/index-panel.html" class="logo-link">
+                <img src="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul style="display: flex; gap: 15px;">
+                    <li><a href="../html/index-panel.html">Inicio</a></li>
+                    <li><a href="../html/index-clientes.html">Clientes</a></li>
+                    <li><a href="../html/index-pedidos.html">Pedidos</a></li>
+                    <li><a href="../html/index-recorridos.html">Recorrido</a></li>
+                </ul>
+            </nav>
+            <!-- Botón de cerrar sesión -->
+            <button id="logoutButton" style="background-color: #ff4d4d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 123px;">
+                Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <main style="text-align: center;">
+        <h1>Bienvenidos a </h1>
+        <img src="../imagenes/logo2.jpeg" alt="" srcset="" style="width: 400px;">
+    </main>
+    <br>
+    <footer>
+        <h4>MBSodaSoft</h4>
+        <h4>353-4228757 | mbsodasoft@gmail.com</h4>
+    </footer>
+
+    <script>
+        // Función para cerrar sesión con confirmación SweetAlert
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            Swal.fire({
+                title: "Confirmación de cierre de sesión",
+                text: "¿Deseas cerrar sesión?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sí, cerrar sesión",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "../html/index-inicio.html";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

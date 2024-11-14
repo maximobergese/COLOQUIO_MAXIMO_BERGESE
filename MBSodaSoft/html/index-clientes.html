@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBSodaSoft | Clientes</title>
+    <link rel="stylesheet" href="../css/style-clientes.css">
+    <link rel="icon" href="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a href="../html/index-panel.html" class="logo-link">
+            <img src="../imagenes/a-sleek-and-modern-logo-featuring-dark-blue-and-wh-Awe55QYGSA--OCRA0pKQ_g-4nEYERmwSkeU4KQduPZ1Ow.jpeg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../html/index-panel.html">Inicio</a></li>
+                <li><a href="../html/index-clientes.html">Clientes</a></li>
+                <li><a href="../html/index-pedidos.html">Pedidos</a></li>
+                <li><a href="../html/index-recorridos.html">Recorrido</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <!-- Formulario para carga de datos -->
+    <div class="form-container"> 
+        <h2>Datos del Cliente</h2>
+        <form id="clienteForm">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <label for="zona">Zona: <p style="display: inline-block; font-size: 10px;">(zonas disponibles en Recorrido)</p></label>
+            <select id="zona" name="zona" required>
+                <option value="" disabled selected>Seleccionar una zona</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" name="localidad" required>
+            <button type="submit" id="guardarBtn" class="botones">Guardar</button>
+            <button type="button" id="modificarBtn" style="display:none;" class="botones">Guardar modificación</button>
+        </form>
+        
+    </div>
+    <!-- Buscador de clientes -->
+    <h2>Buscar clientes</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar cliente por nombre o estado">
+    </div>
+    <!-- Listado de clientes -->
+    <h2>Lista de clientes</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead> 
+                <tr>
+                    <th>| Código</th>
+                    <th>| Nombre</th>
+                    <th>| DNI</th>
+                    <th>| Teléfono</th>
+                    <th>| Dirección</th>
+                    <th>| Zona</th>
+                    <th>| Estado</th>
+                    <th>| Localidad</th>
+                    <th>| Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="table_usuario">
+                <!-- Acá se listan los clientes -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+</main>
+<footer>
+    <h4>MBSodaSoft</h4>
+    <h4>353-4228757 | mbsodasoft@gmail.com</h4>
+</footer>
+
+<script src="../scripts/clientes.js"></script>
+</body>
+</html>
